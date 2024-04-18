@@ -4,6 +4,9 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 import Whatsapp from "../components/icons/Whatsapp.astro";
+import Callme from "../components/icons/Callme.astro";
+
+
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -21,12 +24,41 @@ const last_posts = posts.slice(0, 3);
       </text>
     </div>
     <div class="mt-8">
-      
-      <a href="https://wa.me/5555555555" target="_blank" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded border border-green-700" rel="noopener noreferrer">
-        hableme por whatsapp <Whatsapp class="w-6 h-6 inline-block" />
+      <div class="flex space-x-4">
+      <a 
+        href="https://wa.me/5555555555" 
+        target="_blank" 
+        class="
+           
+            bg-green-500 
+            hover:bg-green-700 
+            text-white 
+            font-bold 
+            py-2 px-4 
+            rounded-xl 
+            border border-green-700" 
+        rel="noopener noreferrer">
+        H&aacute;blame por Whatsapp <Whatsapp class="w-6 h-6 inline-block" />
       </a>
+    
+
+    <a 
+      href="tel:+5555555555" 
+      target="_blank" 
+      class="
+        bg-gray-700 
+        hover:bg-gray-900 
+        text-white font-bold 
+        py-2 px-4 
+        flex items-center 
+        rounded-xl border 
+        border-gray-700" 
+      rel="noopener noreferrer">
+      Ll&aacute;mame  <Callme class="w-5 h-5 inline-block" /> 
+    </a>
       
       
+    </div>
     </div>
   </div>
 
@@ -35,30 +67,38 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
+    title="Ansiedad"
+    img="/ansiedad.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     url="#"
-    badge="NEW"
+    
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
+    title="Depresi&oacute;n"
+    img="/depresion.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     url="#"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
+    title="Bipolaridad"
+    img="/bipolaridad.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     url="#"
-    badge="FOSS"
+    
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Psiquiatría de niños y adolescentes"
+    img="/adolecentes.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+    
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Hablemos de Psiquiatria</div>
   </div>
 
   {
